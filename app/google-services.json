@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "985842101251",
+    "firebase_url": "https://chatchat-7eccd.firebaseio.com",
+    "project_id": "chatchat-7eccd",
+    "storage_bucket": "chatchat-7eccd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:985842101251:android:8b233ac7923a52c3",
+        "android_client_info": {
+          "package_name": "com.elgeekman.alejandrorodriguezuson.zeldabreathofthewild"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "985842101251-gkc0egbc0kit51509ldqchhavhtqd6qo.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.elgeekman.alejandrorodriguezuson.zeldabreathofthewild",
+            "certificate_hash": "30e591f4e2281c41628ed5cc622b3bc8050261af"
+          }
+        },
+        {
+          "client_id": "985842101251-r9cltl4pae7ku43u5nsl23ge7fhhekck.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD4C98HeVKWYajGkW0OLqfll7n83Js9-cs"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "985842101251-r9cltl4pae7ku43u5nsl23ge7fhhekck.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
