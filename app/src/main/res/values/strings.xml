@@ -21,4 +21,16 @@
     <string name="contact_form_button">Enviar mensaje</string>
     <string name="contact_form_post_message">Espere un momento. Estamos enviando el mensaje al departamento de atencion al usuario...</string>
     <string name="contact_posted">Tu mensaje ha sido correctamente enviado.</string>
+
+    <!--Personajes-->
+    <string name="texto_link">Protagonista de la historia al que controlaremos durante la aventura. Se trata de un joven guerrero que lleva durmiendo durante 100 años hasta que un día es despertado por una extraña voz femenina, empezando el periplo por conocer su pasado, así como por salvar a Hyrule de la amenaza de Ganon.</string>
+    <string name="texto_zelda">Princesa del Reino de Hyrule quien es muy cercana a Link. A lo largo de la rebelión sufrida por el ataque de Ganon vemos que es una de las que más se esfuerza por salvar al Reino.</string>
+    <string name="texto_ganon">Villano de la historia que ha inundado de maldad a todo el Reino durante los últimos 100 años. Su simple presencia ya pone en peligro a todo el reino, siendo el deber de Link deternerlo.</string>
+    <string name="texto_daruk">Valiente Goron quien controla a la bestia divina Vah Rudania.</string>
+    <string name="texto_revali">Orni oado y confiado quien controla a la bestia divina Vah Medoh.</string>
+    <string name="texto_mipha">Princesa de los Zora quien controla a Vah Ruta.</string>
+    <string name="texto_urbosa">Miembro de la tribu Gerudo, quien controla a la bestia divina Vah Naboris.</string>
+
+
+
 </resources>

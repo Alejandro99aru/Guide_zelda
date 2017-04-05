@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Zelda Guide</string>
+    <string name="contact_form">Contact with us</string>
+    <string name="contact_form_button">Send message</string>
+    <string name="contact_form_email">Your email</string>
+    <string name="contact_form_message">Message</string>
+    <string name="contact_form_name">Your name</string>
+    <string name="contact_form_post_message">Wait a momment. We are sending the message to our user departament...</string>
+    <string name="contact_form_subject">Subject</string>
+    <string name="contact_posted">Your message has been sent correctely.</string>
+    <string name="interstetial_mapa">ca-app-pub-1019247544085882/3479908459</string>
+    <string name="interstetial_personajes">ca-app-pub-1019247544085882/9020241255</string>
+    <string name="interstetial_recetas">ca-app-pub</string>
+    <string name="loading">Loading...</string>
+    <string name="native_ad">ca-app-pub-1019247544085882/9439043659</string>
+    <string name="title_activity_map">Map</string>
+
+    <!--Personajes-->
+    <string name="texto_link">Protagonist of the history that we will control during the adventure. It is a young warrior who has been sleeping for 100 years until one day he is awakened by a strange female voice, beginning the journey to know his past, as well as to save Hyrule from the threat of Ganon.</string>
+    <string name="texto_zelda">Princess of the Kingdom of Hyrule who is very close to Link. Throughout the rebellion suffered by the attack of Ganon we see that it is one of those that more strives to save the Kingdom.</string>
+    <string name="texto_ganon">Villain of history who has flooded the Kingdom with evil for the last 100 years. His simple presence already endangers the whole kingdom, being Link's duty to hold him.</string>
+    <string name="texto_daruk">Brave Goron who controls the divine beast Vah Rudania.</string>
+    <string name="texto_revali">Orni heard and trusted who controls the divine beast Vah Medoh.</string>
+    <string name="texto_mipha">Princess of the Zora who controls Vah Ruta.</string>
+    <string name="texto_urbosa">Member of the Gerudo tribe, who controls the divine beast Vah Naboris.</string>
+</resources>
