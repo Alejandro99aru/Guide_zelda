@@ -120,7 +120,7 @@ MainActivity extends AppCompatActivity {
         chat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent chat = new Intent (v.getContext(), chat.class);
+                Intent chat = new Intent (v.getContext(), LoginActivity1.class);
                 startActivityForResult(chat, 0);
             }
         });

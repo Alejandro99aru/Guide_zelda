@@ -38,4 +38,6 @@
     <string name="back_no">NO!</string>
 
     <string name="bt_enviar">Send</string>
+
+    <string name="error_google_sign_in">You got an error</string>
 </resources>

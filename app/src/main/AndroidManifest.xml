@@ -31,7 +31,8 @@
         <activity android:name=".noticias" />
         <activity android:name=".chat" />
         <activity android:name=".chat_room" />
-        <activity android:name=".LoginActivity"></activity>
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".LoginActivity1"></activity>
     </application>
 
 </manifest>
