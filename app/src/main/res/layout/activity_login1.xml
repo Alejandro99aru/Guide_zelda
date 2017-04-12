@@ -6,13 +6,38 @@
     android:layout_height="match_parent"
     tools:context="com.elgeekman.alejandrorodriguezuson.zeldabreathofthewild.LoginActivity1">
 
+    <com.facebook.login.widget.LoginButton
+        android:id="@+id/loginbutton_facebook"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:layout_width="wrap_content"
+        android:visibility="invisible"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/googlebuttun"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="13dp" />
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/googlebuttun"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"
+        android:text="@string/SIGN_IN_LAYOUT" />
 
     <com.google.android.gms.common.SignInButton
-        android:layout_width="match_parent"
+
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
-        android:layout_height="wrap_content"
-        android:id="@+id/googlebuttun">
+
+        android:id="@+id/googlebuttun"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
+
 
     </com.google.android.gms.common.SignInButton>
 </RelativeLayout>

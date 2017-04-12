@@ -40,4 +40,8 @@
     <string name="bt_enviar">Send</string>
 
     <string name="error_google_sign_in">You got an error</string>
+
+    <string name="set_title_login">Enter name:</string>
+    <string name="bt_salir">Log out:</string>
+    <string name="SIGN_IN_LAYOUT">Sign in</string>
 </resources>

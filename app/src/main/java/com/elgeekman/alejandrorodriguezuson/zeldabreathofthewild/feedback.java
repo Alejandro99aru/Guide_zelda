@@ -57,6 +57,14 @@ public class feedback extends AppCompatActivity {
 
             }
         });
+        Button chat = (Button) findViewById(R.id.chat);
+        chat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent chat = new Intent (v.getContext(), LoginActivity1.class);
+                startActivityForResult(chat, 0);
+            }
+        });
 
         Button mapa = (Button) findViewById(R.id.Mapa);
         mapa.setOnClickListener(new View.OnClickListener() {
