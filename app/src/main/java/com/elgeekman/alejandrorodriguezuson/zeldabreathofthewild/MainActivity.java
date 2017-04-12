@@ -108,7 +108,22 @@ MainActivity extends AppCompatActivity {
                 startActivityForResult(feedback, 0);
             }
         });
-
+        Button noticias = (Button) findViewById(R.id.Noticias);
+        noticias.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent noticias = new Intent (v.getContext(), noticias.class);
+                startActivityForResult(noticias, 0);
+            }
+        });
+        Button chat = (Button) findViewById(R.id.chat);
+        chat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent chat = new Intent (v.getContext(), chat.class);
+                startActivityForResult(chat, 0);
+            }
+        });
         // Locate the NativeExpressAdView.
         mAdView = (NativeExpressAdView) findViewById(R.id.adView);
 

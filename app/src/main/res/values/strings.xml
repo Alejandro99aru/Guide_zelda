@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Zelda Guide</string>
+    <string name="app_name">Guía Zelda</string>
     <string name="title_activity_map">Map</string>
     <string name="loading">Cargando...</string>
 
@@ -8,7 +8,6 @@
     <string name="interstetial_personajes">ca-app-pub-1019247544085882/9020241255</string>
     <string name="interstetial_mapa">ca-app-pub-1019247544085882/3479908459</string>
     <string name="interstetial_recetas">ca-app-pub-1019247544085882/4956641656</string>
-
 
 
     <!--Contact Form-->
@@ -31,6 +30,29 @@
     <string name="texto_mipha">Princesa de los Zora quien controla a Vah Ruta.</string>
     <string name="texto_urbosa">Miembro de la tribu Gerudo, quien controla a la bestia divina Vah Naboris.</string>
 
+    <!--Titulos-->
+    <string name="texto_noticias">Noticias</string>
+    <string name="texto_mapas">Mapas</string>
+    <string name="texto_crafteo">Recetas</string>
+    <string name="texto_personajes">Personajes</string>
+    <string name="texto_feedback">Feedback</string>
 
+    <!--Titulos-->
+    <string name="back_question">¿Quieres salir?</string>
+    <string name="back_si">Si</string>
+    <string name="back_no">NO!</string>
+
+    <string name="olinguito">Olinguito</string>
+    <string name="menu">Menu</string>
+    <string name="subtitle">Bassaricyon neblina</string>
+    <string name="option1">Option 1</string>
+    <string name="option2">Option 2</string>
+    <string name="option3">Option 3</string>
+    <string name="details">Details</string>
+    <string name="info">The olinguito is distinct from the other species within the genus, popularly known as "olingos", and also from the kinkajou (kinkajous resemble olingos, but are not closely related). Its average weight is 900 grams (2 lb), making it the smallest procyonid. The animal is an omnivorous frugivore that eats mainly fruits (such as figs), but also insects and nectar; this diet results in feces the size of small blueberries.</string>
+
+    <string name="bt_enviar">Enviar</string>
+
+    <string name="facebook_app_id">1868851513358556</string>
 
 </resources>

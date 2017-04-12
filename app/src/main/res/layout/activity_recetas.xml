@@ -32,13 +32,14 @@
             android:orientation="horizontal" >
 
             <Button
-                android:id="@+id/Personajes"
+                android:id="@+id/Noticias"
                 style="@style/Widget.AppCompat.Button.Colored"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Personajes"
+                android:text="@string/texto_noticias"
                 tools:layout_editor_absoluteX="16dp"
                 tools:layout_editor_absoluteY="5dp" />
+
 
             <Button
                 android:id="@+id/Mapa"
@@ -47,9 +48,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="32dp"
                 android:layout_marginStart="32dp"
-                android:text="Mapa"
+                android:text="@string/texto_mapas"
                 app:layout_constraintLeft_toRightOf="@+id/Personajes"
                 tools:layout_editor_absoluteY="5dp" />
+
 
             <Button
                 android:id="@+id/Crafteo"
@@ -58,8 +60,18 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="32dp"
                 android:layout_marginStart="32dp"
-                android:text="Recetas"
+                android:text="@string/texto_crafteo"
                 app:layout_constraintLeft_toRightOf="@+id/Mapa"
+                tools:layout_editor_absoluteY="5dp" />
+            <Button
+                android:id="@+id/Personajes"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="32dp"
+                android:layout_marginStart="32dp"
+                android:text="@string/texto_personajes"
+                app:layout_constraintLeft_toRightOf="@+id/Personajes"
                 tools:layout_editor_absoluteY="5dp" />
             <Button
                 android:id="@+id/Feedback"
@@ -68,7 +80,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="32dp"
                 android:layout_marginStart="32dp"
-                android:text="Feedback"
+                android:text="@string/texto_feedback"
                 app:layout_constraintLeft_toRightOf="@+id/Crafteo"
                 tools:layout_editor_absoluteY="5dp" />
         </LinearLayout>
@@ -83,978 +95,88 @@
         app:layout_constraintTop_toBottomOf="@+id/toolbar"
         tools:layout_editor_absoluteX="0dp">
 
-        <LinearLayout
+        <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/card"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            card_view:cardBackgroundColor="@android:color/white"
+            card_view:cardCornerRadius="4dp"
+            card_view:cardElevation="4dp"
+            card_view:cardUseCompatPadding="true">
 
-            <TextView
-                android:id="@+id/a1"
-                android:layout_width="242dp"
-                android:layout_height="wrap_content"
-                android:text="Pastel de frutas"
-                android:background="@android:color/white"
-                android:layout_gravity="center"
-                android:textAlignment="center"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:layout_above="@+id/textView2"
-                android:layout_alignRight="@+id/textView2"
-                android:layout_alignEnd="@+id/textView2" />
-
-            <TextView
-                android:id="@+id/a11"
-                android:layout_width="242dp"
-                android:layout_height="wrap_content"
-                android:paddingLeft="15dp"
-                android:background="@android:color/white"
-                android:paddingRight="15dp"
-                android:layout_gravity="center"
-                android:text="manzana o frambuesa + cualquier fruta + trigo de Tabanta + caña de azucar"
-                android:textAppearance="?android:attr/textAppearanceSmall" />
-
-            <Space
+            <LinearLayout
+                android:id="@+id/linearLayoutCardContent"
                 android:layout_width="match_parent"
-                android:layout_height="10dp" />
-            <TextView
-                android:id="@+id/a2"
-                android:layout_width="242dp"
                 android:layout_height="wrap_content"
-                android:text="Arroz con marisco"
-                android:background="@android:color/white"
-                android:layout_gravity="center"
-                android:textAlignment="center"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:layout_above="@+id/textView2"
-                android:layout_alignRight="@+id/textView2"
-                android:layout_alignEnd="@+id/textView2" />
+                android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/a22"
-                android:layout_width="242dp"
-                android:layout_height="wrap_content"
-                android:paddingLeft="15dp"
-                android:background="@android:color/white"
-                android:paddingRight="15dp"
-                android:layout_gravity="center"
-                android:text="cualquier dorada + caracol vivaz + arroz de Hyrule + manteca de cabra + halita"
-                android:textAppearance="?android:attr/textAppearanceSmall" />
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/toolbarCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/white"
+                    app:popupTheme="@style/Theme.AppCompat.Light"
+                    app:subtitleTextAppearance="@style/Card.Subtitle"
+                    app:theme="@style/ToolbarCard"
+                    app:titleTextAppearance="@style/Card.Title" />
 
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="10dp" />
+                <!--By Mark Gurney [CC BY 3.0 (http://creativecommons.org/licenses/by/3.0)], via Wikimedia Commons -->
 
-            <TextView
-                android:id="@+id/a3"
-                android:layout_width="242dp"
-                android:layout_height="wrap_content"
-                android:text="Arroz especiado de mosntruo"
-                android:background="@android:color/white"
-                android:layout_gravity="center"
-                android:textAlignment="center"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:layout_above="@+id/textView2"
-                android:layout_alignRight="@+id/textView2"
-                android:layout_alignEnd="@+id/textView2" />
 
-            <TextView
-                android:id="@+id/a33"
-                android:layout_width="242dp"
-                android:layout_height="wrap_content"
-                android:paddingLeft="15dp"
-                android:background="@android:color/white"
-                android:paddingRight="15dp"
-                android:layout_gravity="center"
-                android:text="arroz de Hyrule + especias goron + esencia de monstruo"
-                android:textAppearance="?android:attr/textAppearanceSmall" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="toggleDetails"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
 
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="10dp" />
-            <TextView
-                android:id="@+id/a4"
-                android:layout_width="242dp"
-                android:layout_height="wrap_content"
-                android:text="Bolas de arroz de monstruo"
-                android:background="@android:color/white"
-                android:layout_gravity="center"
-                android:textAlignment="center"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:layout_above="@+id/textView2"
-                android:layout_alignRight="@+id/textView2"
-                android:layout_alignEnd="@+id/textView2" />
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="@string/details"
+                        android:textColor="@android:color/black"
+                        android:textSize="20sp" />
 
-            <TextView
-                android:id="@+id/a44"
-                android:layout_width="242dp"
-                android:layout_height="wrap_content"
-                android:paddingLeft="15dp"
-                android:background="@android:color/white"
-                android:paddingRight="15dp"
-                android:layout_gravity="center"
-                android:text="arroz de Hyrule + halita + esencia de monstruo"
-                android:textAppearance="?android:attr/textAppearanceSmall" />
+                    <ImageView
+                        android:id="@+id/imageViewExpand"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:contentDescription="@string/details"
+                        android:src="@mipmap/more" />
+                </LinearLayout>
 
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="10dp" />
-            <TextView
-            android:id="@+id/a5"
-            android:layout_width="242dp"
-            android:layout_height="wrap_content"
-            android:text="Pastelito de monstruo"
-            android:background="@android:color/white"
-            android:layout_gravity="center"
-            android:textAlignment="center"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:layout_above="@+id/textView2"
-            android:layout_alignRight="@+id/textView2"
-            android:layout_alignEnd="@+id/textView2" />
 
-            <TextView
-                android:id="@+id/a55"
-                android:layout_width="242dp"
-                android:layout_height="wrap_content"
-                android:paddingLeft="15dp"
-                android:background="@android:color/white"
-                android:paddingRight="15dp"
-                android:layout_gravity="center"
-                android:text="trigo de Tabanta + caña de azúcar + manteca de cabra + esencia de monstruo"
-                android:textAppearance="?android:attr/textAppearanceSmall" />
+                <LinearLayout
+                    android:id="@+id/linearLayoutDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="8dp"
+                    android:visibility="gone">
 
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="10dp" />
-            <TextView
-            android:id="@+id/a6"
-            android:layout_width="242dp"
-            android:layout_height="wrap_content"
-            android:text="Sopa de monstruo"
-            android:background="@android:color/white"
-            android:layout_gravity="center"
-            android:textAlignment="center"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:layout_above="@+id/textView2"
-            android:layout_alignRight="@+id/textView2"
-            android:layout_alignEnd="@+id/textView2" />
+                    <TextView
+                        android:id="@+id/textViewInfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/info"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp" />
+                </LinearLayout>
 
-            <TextView
-                android:id="@+id/a66"
-                android:layout_width="242dp"
-                android:layout_height="wrap_content"
-                android:paddingLeft="15dp"
-                android:background="@android:color/white"
-                android:paddingRight="15dp"
-                android:layout_gravity="center"
-                android:text="leche fresca + trigo de Tabanta + manteca de cabra + esencia de monstruo"
-                android:textAppearance="?android:attr/textAppearanceSmall" />
 
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="10dp" />
-            <TextView
-            android:id="@+id/a7"
-            android:layout_width="242dp"
-            android:layout_height="wrap_content"
-            android:text="Estofado de monstruo"
-            android:background="@android:color/white"
-            android:layout_gravity="center"
-            android:textAlignment="center"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:layout_above="@+id/textView2"
-            android:layout_alignRight="@+id/textView2"
-            android:layout_alignEnd="@+id/textView2" />
+            </LinearLayout>
 
-            <TextView
-                android:id="@+id/a77"
-                android:layout_width="242dp"
-                android:layout_height="wrap_content"
-                android:paddingLeft="15dp"
-                android:background="@android:color/white"
-                android:paddingRight="15dp"
-                android:layout_gravity="center"
-                android:text="cualquier carne + cualquier pescado + esencia de monstruo"
-                android:textAppearance="?android:attr/textAppearanceSmall" />
+        </android.support.v7.widget.CardView>
 
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="10dp" />
-            <TextView
-            android:id="@+id/a8"
-            android:layout_width="242dp"
-            android:layout_height="wrap_content"
-            android:text="Crema de la pasión"
-            android:background="@android:color/white"
-            android:layout_gravity="center"
-            android:textAlignment="center"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:layout_above="@+id/textView2"
-            android:layout_alignRight="@+id/textView2"
-            android:layout_alignEnd="@+id/textView2" />
 
-            <TextView
-                android:id="@+id/a99"
-                android:layout_width="242dp"
-                android:layout_height="wrap_content"
-                android:paddingLeft="15dp"
-                android:background="@android:color/white"
-                android:paddingRight="15dp"
-                android:layout_gravity="center"
-                android:text="cualquier rábano + sandía gélida + fruta electro + leche fresca"
-                android:textAppearance="?android:attr/textAppearanceSmall" />
 
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="10dp" />
-            <com.google.android.gms.ads.NativeExpressAdView
-                android:id="@+id/adView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_alignParentBottom="true"
-                ads:adSize="320x300"
-                ads:adUnitId="@string/native_ad">
-            </com.google.android.gms.ads.NativeExpressAdView>
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="10dp" />
-            <TextView
-            android:id="@+id/b1"
-            android:layout_width="242dp"
-            android:layout_height="wrap_content"
-            android:text="Sopa de caracol"
-            android:background="@android:color/white"
-            android:layout_gravity="center"
-            android:textAlignment="center"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:layout_above="@+id/textView2"
-            android:layout_alignRight="@+id/textView2"
-            android:layout_alignEnd="@+id/textView2" />
 
-            <TextView
-                android:id="@+id/b11"
-                android:layout_width="242dp"
-                android:layout_height="wrap_content"
-                android:paddingLeft="15dp"
-                android:background="@android:color/white"
-                android:paddingRight="15dp"
-                android:layout_gravity="center"
-                android:text="leche fresca + trigo de Tabanta + manteca de cabra + caracol vivaz"
-                android:textAppearance="?android:attr/textAppearanceSmall" />
 
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="10dp" />
-            <TextView
-            android:id="@+id/b2"
-            android:layout_width="242dp"
-            android:layout_height="wrap_content"
-            android:text="Guiso de calabaza"
-            android:background="@android:color/white"
-            android:layout_gravity="center"
-            android:textAlignment="center"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:layout_above="@+id/textView2"
-            android:layout_alignRight="@+id/textView2"
-            android:layout_alignEnd="@+id/textView2" />
 
-            <TextView
-                android:id="@+id/b22"
-                android:layout_width="242dp"
-                android:layout_height="wrap_content"
-                android:paddingLeft="15dp"
-                android:background="@android:color/white"
-                android:paddingRight="15dp"
-                android:layout_gravity="center"
-                android:text="leche fresca + trigo de Tabanta + manteca de cabra + calabaza robusta"
-                android:textAppearance="?android:attr/textAppearanceSmall" />
-
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="10dp" />
-            <TextView
-            android:id="@+id/b3"
-            android:layout_width="242dp"
-            android:layout_height="wrap_content"
-            android:text="Guiso de carne"
-            android:background="@android:color/white"
-            android:layout_gravity="center"
-            android:textAlignment="center"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:layout_above="@+id/textView2"
-            android:layout_alignRight="@+id/textView2"
-            android:layout_alignEnd="@+id/textView2" />
-
-            <TextView
-                android:id="@+id/b33"
-                android:layout_width="242dp"
-                android:layout_height="wrap_content"
-                android:paddingLeft="15dp"
-                android:background="@android:color/white"
-                android:paddingRight="15dp"
-                android:layout_gravity="center"
-                android:text=" leche fresca + trigo de Tabanta + manteca de cabra + carne de caza o carne de ave"
-                android:textAppearance="?android:attr/textAppearanceSmall" />
-
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="10dp" /><TextView
-            android:id="@+id/b4"
-            android:layout_width="242dp"
-            android:layout_height="wrap_content"
-            android:text="Guiso de carne XL"
-            android:background="@android:color/white"
-            android:layout_gravity="center"
-            android:textAlignment="center"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:layout_above="@+id/textView2"
-            android:layout_alignRight="@+id/textView2"
-            android:layout_alignEnd="@+id/textView2" />
-
-            <TextView
-                android:id="@+id/b44"
-                android:layout_width="242dp"
-                android:layout_height="wrap_content"
-                android:paddingLeft="15dp"
-                android:background="@android:color/white"
-                android:paddingRight="15dp"
-                android:layout_gravity="center"
-                android:text="leche fresca + trigo de Tabanta + manteca de cabra + carne de caza XL o carne de ave XL"
-                android:textAppearance="?android:attr/textAppearanceSmall" />
-
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="10dp" />
-
-            <TextView
-            android:id="@+id/b55"
-            android:layout_width="242dp"
-            android:layout_height="wrap_content"
-            android:text="Guiso de carne XXL"
-            android:background="@android:color/white"
-            android:layout_gravity="center"
-            android:textAlignment="center"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:layout_above="@+id/textView2"
-            android:layout_alignRight="@+id/textView2"
-            android:layout_alignEnd="@+id/textView2" />
-
-            <TextView
-                android:id="@+id/b66"
-                android:layout_width="242dp"
-                android:layout_height="wrap_content"
-                android:paddingLeft="15dp"
-                android:background="@android:color/white"
-                android:paddingRight="15dp"
-                android:layout_gravity="center"
-                android:text="leche fresca + trigo de Tabanta + manteca de cabra + carne de caza XXL o carne de ave XL"
-                android:textAppearance="?android:attr/textAppearanceSmall" />
-
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="10dp" />
-
-            <TextView
-            android:id="@+id/b7"
-            android:layout_width="242dp"
-            android:layout_height="wrap_content"
-            android:text="Arroz especiado con carne"
-            android:background="@android:color/white"
-            android:layout_gravity="center"
-            android:textAlignment="center"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:layout_above="@+id/textView2"
-            android:layout_alignRight="@+id/textView2"
-            android:layout_alignEnd="@+id/textView2" />
-
-            <TextView
-                android:id="@+id/b77"
-                android:layout_width="242dp"
-                android:layout_height="wrap_content"
-                android:paddingLeft="15dp"
-                android:background="@android:color/white"
-                android:paddingRight="15dp"
-                android:layout_gravity="center"
-                android:text="carne de caza + arroz de Hyrule + especias de goron"
-                android:textAppearance="?android:attr/textAppearanceSmall" />
-
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="10dp" />
-            <TextView
-            android:id="@+id/b8"
-            android:layout_width="242dp"
-            android:layout_height="wrap_content"
-            android:text="Arroz especiado con carne XL"
-            android:background="@android:color/white"
-            android:layout_gravity="center"
-            android:textAlignment="center"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:layout_above="@+id/textView2"
-            android:layout_alignRight="@+id/textView2"
-            android:layout_alignEnd="@+id/textView2" />
-
-            <TextView
-                android:id="@+id/b88"
-                android:layout_width="242dp"
-                android:layout_height="wrap_content"
-                android:paddingLeft="15dp"
-                android:background="@android:color/white"
-                android:paddingRight="15dp"
-                android:layout_gravity="center"
-                android:text="carne de caza XL + arroz de Hyrule + especias de goron"
-                android:textAppearance="?android:attr/textAppearanceSmall" />
-
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="10dp" />
-            <TextView
-            android:id="@+id/b9"
-            android:layout_width="242dp"
-            android:layout_height="wrap_content"
-            android:text="Arroz especiado con carne XXL"
-            android:background="@android:color/white"
-            android:layout_gravity="center"
-            android:textAlignment="center"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:layout_above="@+id/textView2"
-            android:layout_alignRight="@+id/textView2"
-            android:layout_alignEnd="@+id/textView2" />
-
-            <TextView
-                android:id="@+id/b99"
-                android:layout_width="242dp"
-                android:layout_height="wrap_content"
-                android:paddingLeft="15dp"
-                android:background="@android:color/white"
-                android:paddingRight="15dp"
-                android:layout_gravity="center"
-                android:text="carne de caza XXL + arroz de Hyrule + especias de goron"
-                android:textAppearance="?android:attr/textAppearanceSmall" />
-
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="10dp" /><TextView
-            android:id="@+id/c1"
-            android:layout_width="242dp"
-            android:layout_height="wrap_content"
-            android:text="Arroz especiado con pollo"
-            android:background="@android:color/white"
-            android:layout_gravity="center"
-            android:textAlignment="center"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:layout_above="@+id/textView2"
-            android:layout_alignRight="@+id/textView2"
-            android:layout_alignEnd="@+id/textView2" />
-
-            <TextView
-                android:id="@+id/c11"
-                android:layout_width="242dp"
-                android:layout_height="wrap_content"
-                android:paddingLeft="15dp"
-                android:background="@android:color/white"
-                android:paddingRight="15dp"
-                android:layout_gravity="center"
-                android:text="carne de ave + arroz de Hyrule + especias de goron"
-                android:textAppearance="?android:attr/textAppearanceSmall" />
-
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="10dp" />
-
-            <TextView
-            android:id="@+id/c2"
-            android:layout_width="242dp"
-            android:layout_height="wrap_content"
-            android:text="Arroz especiado con pollo XL"
-            android:background="@android:color/white"
-            android:layout_gravity="center"
-            android:textAlignment="center"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:layout_above="@+id/textView2"
-            android:layout_alignRight="@+id/textView2"
-            android:layout_alignEnd="@+id/textView2" />
-
-            <TextView
-                android:id="@+id/c22"
-                android:layout_width="242dp"
-                android:layout_height="wrap_content"
-                android:paddingLeft="15dp"
-                android:background="@android:color/white"
-                android:paddingRight="15dp"
-                android:layout_gravity="center"
-                android:text="carne de ave XL + arroz de Hyrule + especias de goron"
-                android:textAppearance="?android:attr/textAppearanceSmall" />
-
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="10dp" /><TextView
-            android:id="@+id/c3"
-            android:layout_width="242dp"
-            android:layout_height="wrap_content"
-            android:text="Arroz especiado con pollo XXL"
-            android:background="@android:color/white"
-            android:layout_gravity="center"
-            android:textAlignment="center"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:layout_above="@+id/textView2"
-            android:layout_alignRight="@+id/textView2"
-            android:layout_alignEnd="@+id/textView2" />
-
-            <TextView
-                android:id="@+id/c33"
-                android:layout_width="242dp"
-                android:layout_height="wrap_content"
-                android:paddingLeft="15dp"
-                android:background="@android:color/white"
-                android:paddingRight="15dp"
-                android:layout_gravity="center"
-                android:text="carne de ave XXL + arroz de Hyrule + especias de goron"
-                android:textAppearance="?android:attr/textAppearanceSmall" />
-
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="10dp" /><TextView
-            android:id="@+id/c4"
-            android:layout_width="242dp"
-            android:layout_height="wrap_content"
-            android:text="Arroz especiado con marisco"
-            android:background="@android:color/white"
-            android:layout_gravity="center"
-            android:textAlignment="center"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:layout_above="@+id/textView2"
-            android:layout_alignRight="@+id/textView2"
-            android:layout_alignEnd="@+id/textView2" />
-
-            <TextView
-                android:id="@+id/c44"
-                android:layout_width="242dp"
-                android:layout_height="wrap_content"
-                android:paddingLeft="15dp"
-                android:background="@android:color/white"
-                android:paddingRight="15dp"
-                android:layout_gravity="center"
-                android:text="caracol vivaz o cualquier dorada + arroz de Hyrule + especias de goron"
-                android:textAppearance="?android:attr/textAppearanceSmall" />
-
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="10dp" /><TextView
-            android:id="@+id/c5"
-            android:layout_width="242dp"
-            android:layout_height="wrap_content"
-            android:text="Arroz especiado con verduras"
-            android:background="@android:color/white"
-            android:layout_gravity="center"
-            android:textAlignment="center"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:layout_above="@+id/textView2"
-            android:layout_alignRight="@+id/textView2"
-            android:layout_alignEnd="@+id/textView2" />
-
-            <TextView
-                android:id="@+id/c55"
-                android:layout_width="242dp"
-                android:layout_height="wrap_content"
-                android:paddingLeft="15dp"
-                android:background="@android:color/white"
-                android:paddingRight="15dp"
-                android:layout_gravity="center"
-                android:text="cualquier zanahoria o calabaza + arroz de Hyrule + especias de goron"
-                android:textAppearance="?android:attr/textAppearanceSmall" />
-
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="10dp" />
-
-            <TextView
-            android:id="@+id/c6"
-            android:layout_width="242dp"
-            android:layout_height="wrap_content"
-            android:text="Pastel de calabaza"
-            android:background="@android:color/white"
-            android:layout_gravity="center"
-            android:textAlignment="center"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:layout_above="@+id/textView2"
-            android:layout_alignRight="@+id/textView2"
-            android:layout_alignEnd="@+id/textView2" />
-
-            <TextView
-                android:id="@+id/c66"
-                android:layout_width="242dp"
-                android:layout_height="wrap_content"
-                android:paddingLeft="15dp"
-                android:background="@android:color/white"
-                android:paddingRight="15dp"
-                android:layout_gravity="center"
-                android:text="calabaza robusta + trigo de Tabanta + caña de azúcar + manteca de cabra"
-                android:textAppearance="?android:attr/textAppearanceSmall" />
-
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="10dp" />
-
-            <TextView
-            android:id="@+id/c7"
-            android:layout_width="242dp"
-            android:layout_height="wrap_content"
-            android:text="Pastel de zanahoria"
-            android:background="@android:color/white"
-            android:layout_gravity="center"
-            android:textAlignment="center"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:layout_above="@+id/textView2"
-            android:layout_alignRight="@+id/textView2"
-            android:layout_alignEnd="@+id/textView2" />
-
-            <TextView
-                android:id="@+id/c77"
-                android:layout_width="242dp"
-                android:layout_height="wrap_content"
-                android:paddingLeft="15dp"
-                android:background="@android:color/white"
-                android:paddingRight="15dp"
-                android:layout_gravity="center"
-                android:text="cualquier zanahoria + trigo de Tabanta + caña de azúcar + manteca de cabra"
-                android:textAppearance="?android:attr/textAppearanceSmall" />
-
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="10dp" /><TextView
-            android:id="@+id/c8"
-            android:layout_width="242dp"
-            android:layout_height="wrap_content"
-            android:text="Torta con miel"
-            android:background="@android:color/white"
-            android:layout_gravity="center"
-            android:textAlignment="center"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:layout_above="@+id/textView2"
-            android:layout_alignRight="@+id/textView2"
-            android:layout_alignEnd="@+id/textView2" />
-
-            <TextView
-                android:id="@+id/c88"
-                android:layout_width="242dp"
-                android:layout_height="wrap_content"
-                android:paddingLeft="15dp"
-                android:background="@android:color/white"
-                android:paddingRight="15dp"
-                android:layout_gravity="center"
-                android:text="leche fresca + huevo de ave + trigo de Tabanta + caña de azúcar + miel de vigor"
-                android:textAppearance="?android:attr/textAppearanceSmall" />
-
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="10dp" /><TextView
-            android:id="@+id/c9"
-            android:layout_width="242dp"
-            android:layout_height="wrap_content"
-            android:text="Torta de frambuesas"
-            android:background="@android:color/white"
-            android:layout_gravity="center"
-            android:textAlignment="center"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:layout_above="@+id/textView2"
-            android:layout_alignRight="@+id/textView2"
-            android:layout_alignEnd="@+id/textView2" />
-
-            <TextView
-                android:id="@+id/c99"
-                android:layout_width="242dp"
-                android:layout_height="wrap_content"
-                android:paddingLeft="15dp"
-                android:background="@android:color/white"
-                android:paddingRight="15dp"
-                android:layout_gravity="center"
-                android:text="leche fresca + huevo de ave + trigo de Tabanta + caña de azúcar + frambuesa"
-                android:textAppearance="?android:attr/textAppearanceSmall" />
-
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="10dp" />
-
-            <TextView
-            android:id="@+id/d1"
-            android:layout_width="242dp"
-            android:layout_height="wrap_content"
-            android:text="Torta con miel"
-            android:background="@android:color/white"
-            android:layout_gravity="center"
-            android:textAlignment="center"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:layout_above="@+id/textView2"
-            android:layout_alignRight="@+id/textView2"
-            android:layout_alignEnd="@+id/textView2" />
-
-            <TextView
-                android:id="@+id/d11"
-                android:layout_width="242dp"
-                android:layout_height="wrap_content"
-                android:paddingLeft="15dp"
-                android:background="@android:color/white"
-                android:paddingRight="15dp"
-                android:layout_gravity="center"
-                android:text="leche fresca + huevo de ave + trigo de Tabanta + caña de azúcar + miel de vigor"
-                android:textAppearance="?android:attr/textAppearanceSmall" />
-
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="10dp" /><TextView
-            android:id="@+id/d2"
-            android:layout_width="242dp"
-            android:layout_height="wrap_content"
-            android:text="Torta con mantequilla"
-            android:background="@android:color/white"
-            android:layout_gravity="center"
-            android:textAlignment="center"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:layout_above="@+id/textView2"
-            android:layout_alignRight="@+id/textView2"
-            android:layout_alignEnd="@+id/textView2" />
-
-            <TextView
-                android:id="@+id/d22"
-                android:layout_width="242dp"
-                android:layout_height="wrap_content"
-                android:paddingLeft="15dp"
-                android:background="@android:color/white"
-                android:paddingRight="15dp"
-                android:layout_gravity="center"
-                android:text="leche fresca + huevo de ave + trigo de Tabanta + caña de azúcar"
-                android:textAppearance="?android:attr/textAppearanceSmall" />
-
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="10dp" /><TextView
-            android:id="@+id/d3"
-            android:layout_width="242dp"
-            android:layout_height="wrap_content"
-            android:text="Tarta de manzana"
-            android:background="@android:color/white"
-            android:layout_gravity="center"
-            android:textAlignment="center"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:layout_above="@+id/textView2"
-            android:layout_alignRight="@+id/textView2"
-            android:layout_alignEnd="@+id/textView2" />
-
-            <TextView
-                android:id="@+id/d33"
-                android:layout_width="242dp"
-                android:layout_height="wrap_content"
-                android:paddingLeft="15dp"
-                android:background="@android:color/white"
-                android:paddingRight="15dp"
-                android:layout_gravity="center"
-                android:text="manzana + trigo de Tabanta + caña de azúcar + manteca de cabra"
-                android:textAppearance="?android:attr/textAppearanceSmall" />
-
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="10dp" />
-
-            <TextView
-            android:id="@+id/d4"
-            android:layout_width="242dp"
-            android:layout_height="wrap_content"
-            android:text="Bizcocho de semilla"
-            android:background="@android:color/white"
-            android:layout_gravity="center"
-            android:textAlignment="center"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:layout_above="@+id/textView2"
-            android:layout_alignRight="@+id/textView2"
-            android:layout_alignEnd="@+id/textView2" />
-
-            <TextView
-                android:id="@+id/d44"
-                android:layout_width="242dp"
-                android:layout_height="wrap_content"
-                android:paddingLeft="15dp"
-                android:background="@android:color/white"
-                android:paddingRight="15dp"
-                android:layout_gravity="center"
-                android:text="cualquier semilla + trigo de Tabanta + caña de azúcar + manteca de cabra"
-                android:textAppearance="?android:attr/textAppearanceSmall" />
-
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="10dp" /><TextView
-            android:id="@+id/d5"
-            android:layout_width="242dp"
-            android:layout_height="wrap_content"
-            android:text="Tartaleta de huevo"
-            android:background="@android:color/white"
-            android:layout_gravity="center"
-            android:textAlignment="center"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:layout_above="@+id/textView2"
-            android:layout_alignRight="@+id/textView2"
-            android:layout_alignEnd="@+id/textView2" />
-
-            <TextView
-                android:id="@+id/d55"
-                android:layout_width="242dp"
-                android:layout_height="wrap_content"
-                android:paddingLeft="15dp"
-                android:background="@android:color/white"
-                android:paddingRight="15dp"
-                android:layout_gravity="center"
-                android:text="huevo de ave + trigo de Tabanta + caña de azúcar + manteca de cabra"
-                android:textAppearance="?android:attr/textAppearanceSmall" />
-
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="10dp" /><TextView
-            android:id="@+id/d6"
-            android:layout_width="242dp"
-            android:layout_height="wrap_content"
-            android:text="Flan de huevo"
-            android:background="@android:color/white"
-            android:layout_gravity="center"
-            android:textAlignment="center"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:layout_above="@+id/textView2"
-            android:layout_alignRight="@+id/textView2"
-            android:layout_alignEnd="@+id/textView2" />
-
-            <TextView
-                android:id="@+id/d66"
-                android:layout_width="242dp"
-                android:layout_height="wrap_content"
-                android:paddingLeft="15dp"
-                android:background="@android:color/white"
-                android:paddingRight="15dp"
-                android:layout_gravity="center"
-                android:text=" leche fresca + huevo de ave + caña de azúcar"
-                android:textAppearance="?android:attr/textAppearanceSmall" />
-
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="10dp" />
-
-            <TextView
-            android:id="@+id/d7"
-            android:layout_width="242dp"
-            android:layout_height="wrap_content"
-            android:text="Plátano frito"
-            android:background="@android:color/white"
-            android:layout_gravity="center"
-            android:textAlignment="center"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:layout_above="@+id/textView2"
-            android:layout_alignRight="@+id/textView2"
-            android:layout_alignEnd="@+id/textView2" />
-
-            <TextView
-                android:id="@+id/d77"
-                android:layout_width="242dp"
-                android:layout_height="wrap_content"
-                android:paddingLeft="15dp"
-                android:background="@android:color/white"
-                android:paddingRight="15dp"
-                android:layout_gravity="center"
-                android:text="plátanos recios + trigo de Tabanta + caña de azúcar"
-                android:textAppearance="?android:attr/textAppearanceSmall" />
-
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="10dp" />
-
-            <TextView
-            android:id="@+id/d8"
-            android:layout_width="242dp"
-            android:layout_height="wrap_content"
-            android:text="Pastelito de frutas"
-            android:background="@android:color/white"
-            android:layout_gravity="center"
-            android:textAlignment="center"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:layout_above="@+id/textView2"
-            android:layout_alignRight="@+id/textView2"
-            android:layout_alignEnd="@+id/textView2" />
-
-            <TextView
-                android:id="@+id/d88"
-                android:layout_width="242dp"
-                android:layout_height="wrap_content"
-                android:paddingLeft="15dp"
-                android:background="@android:color/white"
-                android:paddingRight="15dp"
-                android:layout_gravity="center"
-                android:text="cualquier fruta + trigo de Tabanta + caña de azúcar + manteca de cabra"
-                android:textAppearance="?android:attr/textAppearanceSmall" />
-
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="10dp" />
-
-            <TextView
-            android:id="@+id/d9"
-            android:layout_width="242dp"
-            android:layout_height="wrap_content"
-            android:text="Hojaldre de carne"
-            android:background="@android:color/white"
-            android:layout_gravity="center"
-            android:textAlignment="center"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:layout_above="@+id/textView2"
-            android:layout_alignRight="@+id/textView2"
-            android:layout_alignEnd="@+id/textView2" />
-
-            <TextView
-                android:id="@+id/d99"
-                android:layout_width="242dp"
-                android:layout_height="wrap_content"
-                android:paddingLeft="15dp"
-                android:background="@android:color/white"
-                android:paddingRight="15dp"
-                android:layout_gravity="center"
-                android:text="trigo de Tabanta + manteca de cabra + halita + cualquier carne"
-                android:textAppearance="?android:attr/textAppearanceSmall" />
-
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="10dp" />
-            <com.google.android.gms.ads.NativeExpressAdView
-                android:id="@+id/adView10"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_alignParentBottom="true"
-                ads:adSize="320x300"
-                ads:adUnitId="@string/native_ad">
-            </com.google.android.gms.ads.NativeExpressAdView>
-            <TextView
-            android:id="@+id/e1"
-            android:layout_width="242dp"
-            android:layout_height="wrap_content"
-            android:text="Pescado de hojaldre"
-            android:background="@android:color/white"
-            android:layout_gravity="center"
-            android:textAlignment="center"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:layout_above="@+id/textView2"
-            android:layout_alignRight="@+id/textView2"
-            android:layout_alignEnd="@+id/textView2" />
-
-            <TextView
-                android:id="@+id/e11"
-                android:layout_width="242dp"
-                android:layout_height="wrap_content"
-                android:paddingLeft="15dp"
-                android:background="@android:color/white"
-                android:paddingRight="15dp"
-                android:layout_gravity="center"
-                android:text="trigo de Tabanta + manteca de cabra + halita + cualquier pescado"
-                android:textAppearance="?android:attr/textAppearanceSmall" />
-
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="10dp" />
-        </LinearLayout>
     </ScrollView>
 
 </android.support.constraint.ConstraintLayout>

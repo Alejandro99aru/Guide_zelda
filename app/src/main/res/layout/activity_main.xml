@@ -31,13 +31,14 @@
             android:orientation="horizontal" >
 
             <Button
-                android:id="@+id/Personajes"
+                android:id="@+id/Noticias"
                 style="@style/Widget.AppCompat.Button.Colored"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Personajes"
+                android:text="@string/texto_noticias"
                 tools:layout_editor_absoluteX="16dp"
                 tools:layout_editor_absoluteY="5dp" />
+
 
             <Button
                 android:id="@+id/Mapa"
@@ -46,9 +47,20 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="32dp"
                 android:layout_marginStart="32dp"
-                android:text="Mapa"
+                android:text="@string/texto_mapas"
                 app:layout_constraintLeft_toRightOf="@+id/Personajes"
                 tools:layout_editor_absoluteY="5dp" />
+            <Button
+                android:id="@+id/chat"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="32dp"
+                android:layout_marginStart="32dp"
+                android:text="chat"
+                app:layout_constraintLeft_toRightOf="@+id/Personajes"
+                tools:layout_editor_absoluteY="5dp" />
+
 
             <Button
                 android:id="@+id/Crafteo"
@@ -57,8 +69,18 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="32dp"
                 android:layout_marginStart="32dp"
-                android:text="Recetas"
+                android:text="@string/texto_crafteo"
                 app:layout_constraintLeft_toRightOf="@+id/Mapa"
+                tools:layout_editor_absoluteY="5dp" />
+            <Button
+                android:id="@+id/Personajes"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="32dp"
+                android:layout_marginStart="32dp"
+                android:text="@string/texto_personajes"
+                app:layout_constraintLeft_toRightOf="@+id/Personajes"
                 tools:layout_editor_absoluteY="5dp" />
             <Button
                 android:id="@+id/Feedback"
@@ -67,7 +89,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="32dp"
                 android:layout_marginStart="32dp"
-                android:text="Feedback"
+                android:text="@string/texto_feedback"
                 app:layout_constraintLeft_toRightOf="@+id/Crafteo"
                 tools:layout_editor_absoluteY="5dp" />
         </LinearLayout>
@@ -184,7 +206,7 @@
                 android:id="@+id/Daruk_dec"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text=" @string/texto_Daruk"
+                android:text="@string/texto_daruk"
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentLeft="true"

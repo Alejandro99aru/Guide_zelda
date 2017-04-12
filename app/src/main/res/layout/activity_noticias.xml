@@ -4,16 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.elgeekman.alejandrorodriguezuson.zeldabreathofthewild.MainActivity">
+    tools:context="com.elgeekman.alejandrorodriguezuson.zeldabreathofthewild.noticias">
 
     <WebView
-        android:id="@+id/wvMain"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="0dp"
-        tools:layout_editor_absoluteX="7dp"
-        tools:layout_editor_absoluteY="70dp" />
-
+        android:id="@+id/webview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp" />
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="393dp"

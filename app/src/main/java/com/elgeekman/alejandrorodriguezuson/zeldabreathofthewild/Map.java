@@ -55,7 +55,14 @@ public class Map extends AppCompatActivity {
                 mapa.show();
             }
         });
-
+        Button noticias = (Button) findViewById(R.id.Noticias);
+        noticias.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent noticias = new Intent (v.getContext(), noticias.class);
+                startActivityForResult(noticias, 0);
+            }
+        });
         Button crafteo = (Button) findViewById(R.id.Crafteo);
         crafteo.setOnClickListener(new View.OnClickListener() {
             @Override

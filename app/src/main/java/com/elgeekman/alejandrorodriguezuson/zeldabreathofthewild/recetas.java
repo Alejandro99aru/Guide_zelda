@@ -3,9 +3,14 @@ package com.elgeekman.alejandrorodriguezuson.zeldabreathofthewild;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
+import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.RotateAnimation;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.google.android.gms.ads.AdListener;
@@ -15,10 +20,15 @@ import com.google.android.gms.ads.NativeExpressAdView;
 import com.google.android.gms.ads.VideoController;
 import com.google.android.gms.ads.VideoOptions;
 
+import static com.elgeekman.alejandrorodriguezuson.zeldabreathofthewild.R.id.imageViewExpand;
+import static com.elgeekman.alejandrorodriguezuson.zeldabreathofthewild.R.id.linearLayoutDetails;
+import static javax.xml.datatype.DatatypeConstants.DURATION;
+
 public class recetas extends AppCompatActivity {
 
-
-
+    private ViewGroup linearLayoutDetails;
+    private ImageView imageViewExpand;
+    private static final int DURATION = 250;
     private static String LOG_TAG = "EXAMPLE";
 
     NativeExpressAdView mAdView;
@@ -31,42 +41,18 @@ public class recetas extends AppCompatActivity {
 
         AdRequest adRequest = new AdRequest.Builder().build();
 
+        linearLayoutDetails = (ViewGroup) findViewById(R.id.linearLayoutDetails);
+        imageViewExpand = (ImageView) findViewById(R.id.imageViewExpand);
+
+        Toolbar toolbarCard = (Toolbar) findViewById(R.id.toolbarCard);
+        toolbarCard.setTitle(R.string.olinguito);
+        toolbarCard.setSubtitle(R.string.subtitle);
 
 
-        // Locate the NativeExpressAdView.
-        mAdView = (NativeExpressAdView) findViewById(R.id.adView);
 
-// Set its video options.
-        mAdView.setVideoOptions(new VideoOptions.Builder()
-                .setStartMuted(true)
-                .build());
 
-// The VideoController can be used to get lifecycle events and info about an ad's video
-// asset. One will always be returned by getVideoController, even if the ad has no video
-// asset.
-        mVideoController = mAdView.getVideoController();
-        mVideoController.setVideoLifecycleCallbacks(new VideoController.VideoLifecycleCallbacks() {
-            @Override
-            public void onVideoEnd() {
-                Log.d(LOG_TAG, "Video playback is finished.");
-                super.onVideoEnd();
-            }
-        });
 
-// Set an AdListener for the AdView, so the Activity can take action when an ad has finished
-// loading.
-        mAdView.setAdListener(new AdListener() {
-            @Override
-            public void onAdLoaded() {
-                if (mVideoController.hasVideoContent()) {
-                    Log.d(LOG_TAG, "Received an ad that contains a video asset.");
-                } else {
-                    Log.d(LOG_TAG, "Received an ad that does not contain a video asset.");
-                }
-            }
-        });
 
-        mAdView.loadAd(new AdRequest.Builder().build());
 
         Button recetas = (Button) findViewById(R.id.Crafteo);
         recetas.setOnClickListener(new View.OnClickListener() {
@@ -106,6 +92,35 @@ public class recetas extends AppCompatActivity {
                 startActivityForResult(feedback, 0);
             }
         });
+        Button noticias = (Button) findViewById(R.id.Noticias);
+        noticias.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent noticias = new Intent (v.getContext(), noticias.class);
+                startActivityForResult(noticias, 0);
+            }
+        });
     }
+    public void toggleDetails(View view) {
+        if (linearLayoutDetails.getVisibility() == View.GONE) {
+            ExpandAndCollapseViewUtil.expand(linearLayoutDetails, DURATION);
+            imageViewExpand.setImageResource(R.mipmap.more);
+            rotate(-180.0f);
+        } else {
+            ExpandAndCollapseViewUtil.collapse(linearLayoutDetails, DURATION);
+            imageViewExpand.setImageResource(R.mipmap.less);
+            rotate(180.0f);
+        }
+    }
+
+    private void rotate(float angle) {
+        Animation animation = new RotateAnimation(0.0f, angle, Animation.RELATIVE_TO_SELF, 0.5f,
+                Animation.RELATIVE_TO_SELF, 0.5f);
+        animation.setFillAfter(true);
+        animation.setDuration(DURATION);
+        imageViewExpand.startAnimation(animation);
+    }
+
+
 
 }

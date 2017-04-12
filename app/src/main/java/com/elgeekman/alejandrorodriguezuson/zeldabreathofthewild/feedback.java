@@ -84,6 +84,14 @@ public class feedback extends AppCompatActivity {
                 startActivityForResult(personajes, 0);
             }
         });
+        Button noticias = (Button) findViewById(R.id.Noticias);
+        noticias.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent noticias = new Intent (v.getContext(), noticias.class);
+                startActivityForResult(noticias, 0);
+            }
+        });
 
         final EditText your_name        = (EditText) findViewById(R.id.your_name);
         final EditText your_email       = (EditText) findViewById(R.id.your_email);

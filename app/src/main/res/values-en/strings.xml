@@ -19,9 +19,23 @@
     <!--Personajes-->
     <string name="texto_link">Protagonist of the history that we will control during the adventure. It is a young warrior who has been sleeping for 100 years until one day he is awakened by a strange female voice, beginning the journey to know his past, as well as to save Hyrule from the threat of Ganon.</string>
     <string name="texto_zelda">Princess of the Kingdom of Hyrule who is very close to Link. Throughout the rebellion suffered by the attack of Ganon we see that it is one of those that more strives to save the Kingdom.</string>
-    <string name="texto_ganon">Villain of history who has flooded the Kingdom with evil for the last 100 years. His simple presence already endangers the whole kingdom, being Link's duty to hold him.</string>
+    <string name="texto_ganon">Villain of history who has flooded the Kingdom with evil for the last 100 years. His simple presence already endangers the whole kingdom</string>
     <string name="texto_daruk">Brave Goron who controls the divine beast Vah Rudania.</string>
     <string name="texto_revali">Orni heard and trusted who controls the divine beast Vah Medoh.</string>
     <string name="texto_mipha">Princess of the Zora who controls Vah Ruta.</string>
     <string name="texto_urbosa">Member of the Gerudo tribe, who controls the divine beast Vah Naboris.</string>
+
+    <!--Titulos-->
+    <string name = "texto_noticias"> News </string>
+    <string name = "texto_mapas"> Maps </string>
+    <string name = "texto_crafteo"> Recipes </string>
+    <string name = "texto_personajes"> Characters </string>
+    <string name = "texto_feedback"> Feedback </string>
+
+    <!--Titulos-->
+    <string name="back_question">¿Quieres salir?</string>
+    <string name="back_si">Si</string>
+    <string name="back_no">NO!</string>
+
+    <string name="bt_enviar">Send</string>
 </resources>
