@@ -63,5 +63,7 @@
     <string name="set_title_login">Introduce nombre de usuario:</string>
     <string name="bt_salir">Desconectar</string>
     <string name="SIGN_IN_LAYOUT">Inicia Sesión</string>
+    <string name="responsable">Haz un uso responsable de este chat</string>
+
 
 </resources>
