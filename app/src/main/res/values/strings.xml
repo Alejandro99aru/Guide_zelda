@@ -64,6 +64,7 @@
     <string name="bt_salir">Desconectar</string>
     <string name="SIGN_IN_LAYOUT">Inicia Sesión</string>
     <string name="responsable">Haz un uso responsable de este chat</string>
+    <string name="msg_enviado">Mensaje enviado</string>
 
 
 </resources>
