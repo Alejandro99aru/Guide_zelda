@@ -32,7 +32,7 @@
             android:orientation="horizontal" >
 
             <Button
-                android:id="@+id/Noticias"
+                android:id="@+id/Noticias_recetas"
                 style="@style/Widget.AppCompat.Button.Colored"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -42,7 +42,7 @@
 
 
             <Button
-                android:id="@+id/Mapa"
+                android:id="@+id/Mapa_recetas"
                 style="@style/Widget.AppCompat.Button.Colored"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -52,7 +52,7 @@
                 app:layout_constraintLeft_toRightOf="@+id/Personajes"
                 tools:layout_editor_absoluteY="5dp" />
             <Button
-                android:id="@+id/chat"
+                android:id="@+id/chat_recetas"
                 style="@style/Widget.AppCompat.Button.Colored"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -64,7 +64,7 @@
 
 
             <Button
-                android:id="@+id/Crafteo"
+                android:id="@+id/Crafteo_recetas"
                 style="@style/Widget.AppCompat.Button.Colored"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -74,7 +74,7 @@
                 app:layout_constraintLeft_toRightOf="@+id/Mapa"
                 tools:layout_editor_absoluteY="5dp" />
             <Button
-                android:id="@+id/Personajes"
+                android:id="@+id/Personajes_recetas"
                 style="@style/Widget.AppCompat.Button.Colored"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -84,7 +84,7 @@
                 app:layout_constraintLeft_toRightOf="@+id/Personajes"
                 tools:layout_editor_absoluteY="5dp" />
             <Button
-                android:id="@+id/Feedback"
+                android:id="@+id/Feedback_recetas"
                 style="@style/Widget.AppCompat.Button.Colored"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

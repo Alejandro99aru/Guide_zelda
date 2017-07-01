@@ -26,4 +26,8 @@
         <item name="android:textColor">@color/textGrey</item>
     </style>
 
+    <style name="CustomAlertDialog" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:windowBackground">@drawable/curve</item>
+    </style>
+
 </resources>

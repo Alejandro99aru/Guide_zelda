@@ -4,4 +4,18 @@
     <color name="colorPrimaryDark">#1B5E20</color>
     <color name="colorAccent">#0288D1</color>
     <item name="textGrey" type="color">#bdbdbd</item>
+
+
+    <!-- Screens background -->
+    <color name="bg_screen1">#b12515</color>
+    <color name="bg_screen2">#FFBB00</color>
+    <color name="bg_screen3">#74a443</color>
+
+    <!-- dots active colors -->
+    <color name="dot_active">#000000</color>
+
+
+    <!-- dots inactive colors -->
+    <color name="dot_inactive">#cccccc</color>
+
 </resources>

@@ -1,8 +1,8 @@
 package com.elgeekman.alejandrorodriguezuson.zeldabreathofthewild;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -17,7 +17,6 @@ import com.google.android.gms.ads.VideoController;
 import com.google.android.gms.ads.VideoOptions;
 import com.google.firebase.analytics.FirebaseAnalytics;
 import com.google.firebase.crash.FirebaseCrash;
-import com.squareup.picasso.Picasso;
 
 public class
 MainActivity extends AppCompatActivity {
@@ -47,19 +46,7 @@ MainActivity extends AppCompatActivity {
 
         AdRequest adRequest = new AdRequest.Builder().build();
 
-        // Prepare the Interstitial Ad
-        interstitial = new InterstitialAd(MainActivity.this);
-// Insert the Ad Unit ID
-        interstitial.setAdUnitId(getString(R.string.interstetial_personajes));
 
-        interstitial.loadAd(adRequest);
-// Prepare an Interstitial Ad Listener
-        interstitial.setAdListener(new AdListener() {
-            public void onAdLoaded() {
-// Call displayInterstitial() function
-                displayInterstitial();
-            }
-        });
 
         mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
 
@@ -82,7 +69,7 @@ MainActivity extends AppCompatActivity {
             }
         });
 
-        Button mapa = (Button) findViewById(R.id.Mapa);
+        Button mapa = (Button) findViewById(R.id.Mapa_main);
         mapa.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -91,7 +78,7 @@ MainActivity extends AppCompatActivity {
             }
         });
 
-        Button crafteo = (Button) findViewById(R.id.Crafteo);
+        Button crafteo = (Button) findViewById(R.id.Crafteo_main);
         crafteo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -100,7 +87,7 @@ MainActivity extends AppCompatActivity {
             }
         });
 
-        Button feedback = (Button) findViewById(R.id.Feedback);
+        Button feedback = (Button) findViewById(R.id.Feedback_main);
         feedback.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -108,7 +95,7 @@ MainActivity extends AppCompatActivity {
                 startActivityForResult(feedback, 0);
             }
         });
-        Button noticias = (Button) findViewById(R.id.Noticias);
+        Button noticias = (Button) findViewById(R.id.Noticias_main);
         noticias.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -116,7 +103,7 @@ MainActivity extends AppCompatActivity {
                 startActivityForResult(noticias, 0);
             }
         });
-        Button chat = (Button) findViewById(R.id.chat);
+        Button chat = (Button) findViewById(R.id.chat_main);
         chat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

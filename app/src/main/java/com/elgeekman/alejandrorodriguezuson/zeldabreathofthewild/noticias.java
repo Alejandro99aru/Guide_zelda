@@ -3,10 +3,7 @@ package com.elgeekman.alejandrorodriguezuson.zeldabreathofthewild;
 import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -23,8 +20,7 @@ import com.google.android.gms.ads.NativeExpressAdView;
 import com.google.android.gms.ads.VideoController;
 import com.google.android.gms.ads.VideoOptions;
 
-public class Map extends AppCompatActivity {
-
+public class noticias extends AppCompatActivity {
     WebView webView;
 
     NativeExpressAdView mAdView;
@@ -38,26 +34,15 @@ public class Map extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.mapa);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+        setContentView(R.layout.activity_noticias);
 
         AdRequest adRequest = new AdRequest.Builder().build();
 
-        LayoutInflater dialogLayout = LayoutInflater.from(Map.this);
+        LayoutInflater dialogLayout = LayoutInflater.from(noticias.this);
         View DialogView = dialogLayout.inflate(R.layout.progress_dialog, null);
 
 
-        main_dialog = new Dialog(Map.this, R.style.CustomAlertDialog);
+        main_dialog = new Dialog(noticias.this, R.style.CustomAlertDialog);
         main_dialog.setContentView(DialogView);
         WindowManager.LayoutParams lp = new  WindowManager.LayoutParams();
         lp.copyFrom(main_dialog.getWindow().getAttributes());
@@ -107,11 +92,10 @@ public class Map extends AppCompatActivity {
         bnp.setMax(100);
         //main_dialog.show();
 
-
-        webView = (WebView)findViewById(R.id.wvMain);
+        webView = (WebView)findViewById(R.id.wvMain1);
         webView.getSettings().setJavaScriptEnabled(true);
         webView.getSettings().setAppCacheEnabled(true);
-        webView.loadUrl("https://zeldamaps.com/?game=BotW");
+        webView.loadUrl("http://www.3djuegos.com/?q=The+Legend+of+Zelda+Breath+of+the+Wild&zona=resultados-buscador&id_foro=0&subzona=noticias&orden=recientes");
         webView.setWebChromeClient(new WebChromeClient(){
 
             public void  onProgressChanged(WebView View, int progress){
@@ -126,12 +110,7 @@ public class Map extends AppCompatActivity {
             }
 
         });
-
-
-
-
-
-        Button personajes = (Button) findViewById(R.id.Personajes_mapa);
+        Button personajes = (Button) findViewById(R.id.Personajes_noticias);
         personajes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -142,7 +121,7 @@ public class Map extends AppCompatActivity {
             }
         });
 
-        Button chat = (Button) findViewById(R.id.chat_mapa);
+        Button chat = (Button) findViewById(R.id.chat_noticias);
         chat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -151,25 +130,25 @@ public class Map extends AppCompatActivity {
             }
         });
 
-        Button mapa = (Button) findViewById(R.id.Mapa_mapa);
+        Button mapa = (Button) findViewById(R.id.Mapa_noticias);
         mapa.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                Toast mapa = Toast.makeText(getApplicationContext(), "Ya estas en mapa" , Toast.LENGTH_LONG);
-
-                mapa.show();
+                Intent mapa = new Intent (v.getContext(), Map.class);
+                startActivityForResult(mapa, 0);
             }
         });
-        Button noticias = (Button) findViewById(R.id.Noticias_mapa);
+        final Button noticias = (Button) findViewById(R.id.Noticias_noticias);
         noticias.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent noticias = new Intent (v.getContext(), noticias.class);
-                startActivityForResult(noticias, 0);
+                Toast noticias = Toast.makeText(getApplicationContext(), "Ya estas en noticias" , Toast.LENGTH_LONG);
+
+                noticias.show();
             }
         });
-        Button crafteo = (Button) findViewById(R.id.Crafteo_mapa);
+        Button crafteo = (Button) findViewById(R.id.Crafteo_noticias);
         crafteo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -178,7 +157,7 @@ public class Map extends AppCompatActivity {
             }
         });
 
-        Button feedback = (Button) findViewById(R.id.Feedback_mapa);
+        Button feedback = (Button) findViewById(R.id.Feedback_noticias);
         feedback.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -186,7 +165,6 @@ public class Map extends AppCompatActivity {
                 startActivityForResult(feedback, 0);
             }
         });
-
 
     }
 

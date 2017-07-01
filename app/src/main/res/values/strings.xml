@@ -67,4 +67,15 @@
     <string name="msg_enviado">Mensaje enviado</string>
 
 
+    <string name="next">Siguiente</string>
+    <string name="skip">Saltar</string>
+    <string name="start">Empezar</string>
+    <string name="title_slide1">Menu</string>
+    <string name="desc_slide1">En el menú superior dispones de varios apartados como feedback, chat, recetas... solo haciendo un scroll</string>
+    <string name="title_slide2">Mapa</string>
+    <string name="desc_slide2">Dispones de un mapa donde poder encontrar todo</string>
+    <string name="title_slide3">Chat</string>
+    <string name="desc_slide3">Chat disponible para poder intercambiar información con otros jugadores</string>
+
+
 </resources>

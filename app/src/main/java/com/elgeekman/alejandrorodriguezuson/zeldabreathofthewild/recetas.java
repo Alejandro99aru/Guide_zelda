@@ -1,8 +1,8 @@
 package com.elgeekman.alejandrorodriguezuson.zeldabreathofthewild;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -10,7 +10,6 @@ import android.widget.Toast;
 
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.InterstitialAd;
 import com.google.android.gms.ads.NativeExpressAdView;
 import com.google.android.gms.ads.VideoController;
 import com.google.android.gms.ads.VideoOptions;
@@ -68,7 +67,7 @@ public class recetas extends AppCompatActivity {
 
         mAdView.loadAd(new AdRequest.Builder().build());
 
-        Button recetas = (Button) findViewById(R.id.Crafteo);
+        Button recetas = (Button) findViewById(R.id.Crafteo_recetas);
         recetas.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -80,7 +79,7 @@ public class recetas extends AppCompatActivity {
             }
         });
 
-        Button mapa = (Button) findViewById(R.id.Mapa);
+        Button mapa = (Button) findViewById(R.id.Mapa_recetas);
         mapa.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -89,7 +88,7 @@ public class recetas extends AppCompatActivity {
             }
         });
 
-        Button personajes = (Button) findViewById(R.id.Personajes);
+        Button personajes = (Button) findViewById(R.id.Personajes_recetas);
         personajes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -97,7 +96,7 @@ public class recetas extends AppCompatActivity {
                 startActivityForResult(personajes, 0);
             }
         });
-        Button chat = (Button) findViewById(R.id.chat);
+        Button chat = (Button) findViewById(R.id.chat_recetas);
         chat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -106,7 +105,7 @@ public class recetas extends AppCompatActivity {
             }
         });
 
-        Button feedback = (Button) findViewById(R.id.Feedback);
+        Button feedback = (Button) findViewById(R.id.Feedback_recetas);
         feedback.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

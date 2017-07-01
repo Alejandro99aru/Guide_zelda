@@ -3,17 +3,15 @@ package com.elgeekman.alejandrorodriguezuson.zeldabreathofthewild;
 import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.InterstitialAd;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -46,7 +44,7 @@ public class feedback extends AppCompatActivity {
             }
         });
 
-        Button feedback = (Button) findViewById(R.id.Feedback);
+        Button feedback = (Button) findViewById(R.id.Feedback_feedback);
         feedback.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -57,7 +55,7 @@ public class feedback extends AppCompatActivity {
 
             }
         });
-        Button chat = (Button) findViewById(R.id.chat);
+        Button chat = (Button) findViewById(R.id.chat_feedback);
         chat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -66,7 +64,7 @@ public class feedback extends AppCompatActivity {
             }
         });
 
-        Button mapa = (Button) findViewById(R.id.Mapa);
+        Button mapa = (Button) findViewById(R.id.Mapa_feedback);
         mapa.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -75,7 +73,7 @@ public class feedback extends AppCompatActivity {
             }
         });
 
-        Button crafteo = (Button) findViewById(R.id.Crafteo);
+        Button crafteo = (Button) findViewById(R.id.Crafteo_feedback);
         crafteo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -84,7 +82,7 @@ public class feedback extends AppCompatActivity {
             }
         });
 
-        Button personajes = (Button) findViewById(R.id.Personajes);
+        Button personajes = (Button) findViewById(R.id.Personajes_feedback);
         personajes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -92,7 +90,7 @@ public class feedback extends AppCompatActivity {
                 startActivityForResult(personajes, 0);
             }
         });
-        Button noticias = (Button) findViewById(R.id.Noticias);
+        Button noticias = (Button) findViewById(R.id.Noticias_feedback);
         noticias.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

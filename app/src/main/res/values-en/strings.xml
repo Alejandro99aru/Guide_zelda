@@ -57,7 +57,15 @@
     <string name="details">Details</string>
     <string name="info">The olinguito is distinct from the other species within the genus, popularly known as "olingos", and also from the kinkajou (kinkajous resemble olingos, but are not closely related). Its average weight is 900 grams (2 lb), making it the smallest procyonid. The animal is an omnivorous frugivore that eats mainly fruits (such as figs), but also insects and nectar; this diet results in feces the size of small blueberries.</string>
 
-
+    <string name="next">Next</string>
+    <string name="skip">Skip</string>
+    <string name="start">Start</string>
+    <string name="title_slide1">Menu</string>
+    <string name="desc_slide1">In the top menu you have several sections such as feedback, chat, recipes ... just doing a scroll</string>
+    <string name="title_slide2">Map</string>
+    <string name="desc_slide2">You have a map where you can find everything</string>
+    <string name="title_slide3">Chat</string>
+    <string name="desc_slide3">Chat available to exchange information with other players</string>
 
     <string name="facebook_app_id">1868851513358556</string>
 </resources>
